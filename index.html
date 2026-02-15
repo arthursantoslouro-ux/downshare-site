@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DownShare</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.container{
+    background:#1e293b;
+    padding:20px;
+    border-radius:12px;
+    max-width:400px;
+    margin:auto;
+}
+
+input, button{
+    padding:10px;
+    margin:10px;
+    border:none;
+    border-radius:8px;
+}
+
+button{
+    background:#22c55e;
+    color:white;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#16a34a;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>🚀 DownShare</h1>
+<p>Compartilhe arquivos simples pela internet</p>
+
+<input id="nome" placeholder="Seu nome">
+<br>
+<button onclick="entrar()">Entrar</button>
+
+<p id="status"></p>
+</div>
+
+<script>
+function entrar(){
+    let nome = document.getElementById("nome").value;
+
+    if(nome === ""){
+        alert("Digite um nome!");
+        return;
+    }
+
+    document.getElementById("status").innerText =
+        "Bem-vindo ao DownShare, " + nome + "!";
+}
+</script>
+
+</body>
+</html>
